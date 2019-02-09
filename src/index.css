@@ -1,14 +1,26 @@
 * {
-	font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+th {
+  padding: 15px;
+}
+
+td {
+  padding: 15px;
+}
+
+tr.top {
+  border-bottom: thin solid black;
 }
