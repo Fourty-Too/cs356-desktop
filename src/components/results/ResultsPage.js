@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 class ResultsPage extends React.Component {
 	render() {
 		return (
-			<div className="text-center" style={{padding: '2rem 5rem', width: "100%", marginLeft: 'auto', marginRight: 'auto', display: 'inline-block', backgroundColor: "#D3D3D3", bottom: 0, position: 'absolute'}}>
+			<div className="text-center" style={{padding: '2rem 5rem', width: "100%", marginLeft: 'auto', marginRight: 'auto', display: 'inline-block', backgroundColor: "#D3D3D3", bottom: 0, position: 'absolute', height: '80%'}}>
 			<h1>Your Car:  </h1> <h3>1997 Mazda MX-5 Miata 1.8L, 169000 miles</h3>
 
 					<div className="jumbotron text-start" style={{justifyContent: 'center', alignItems: 'center', width: '80%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: '#DBEEF4',   borderRadius: '5px',

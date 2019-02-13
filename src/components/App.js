@@ -23,7 +23,7 @@ class App extends React.Component {
 				</nav>
 
 				<div>
-				<img src={logo} className="center" alt="Logo" style={{height: 240, width: 300, paddingTop: 28}}/>
+				<img src={logo} className="center" alt="Logo" style={{height: 275, width: 300, paddingTop: 28, paddingBottom: 28}}/>
 				</div>
 
 			</div>
