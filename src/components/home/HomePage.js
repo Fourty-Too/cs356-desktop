@@ -6,6 +6,21 @@ function changeBackground(color) {
 }
 
 class HomePage extends React.Component {
+	/*miles = 0
+
+	constructor() {
+	 super();
+	 this.state = {
+			mileage: 0
+	 };
+}
+
+	changeItem() {
+		var input = document.getElementById('mileageInput');
+		console.log(input.value);
+		//this.setState({mileage: input.value})
+		console.log(this.miles);
+	}*/
 
 	render() {
 		changeBackground("#D3D3D3");
@@ -69,15 +84,15 @@ class HomePage extends React.Component {
 						<div style={{float: 'left', display: 'inline-block', textAlign: 'left', marginRight: 0, paddingTop: "10px"}}>
 							<label htmlFor="name">Mileage: </label>
 							<br/>
-							<input id="mileageInput" type="text" style={{width: '100%'}}></input>
+							<input id="mileageInput" type="text" style={{width: '100%'}}  onChange={ this.changeItem }></input>
 						</div>
 
 					</form>
 
 					<br/>
 
-					<div class="text-right" style={{marginRight: 0, marginTop: "100px", paddingRight: 15, paddingTop: 30}}>
-						<Link to="results" className="btn btn-primary btn-lg" style={{width: '120px'}}>Go</Link>
+					<div className="text-right" style={{marginRight: 0, marginTop: "100px", paddingRight: 15, paddingTop: 30}}>
+						<Link to={"results"} className="btn btn-primary btn-lg" style={{width: '120px'}}>Go</Link>
 					</div>
 
 					</div>

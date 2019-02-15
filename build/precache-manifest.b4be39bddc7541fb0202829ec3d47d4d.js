@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "0f973740d7235b692b49",
+    "revision": "44853720b15fbd1eeae7",
     "url": "/cs356-desktop/static/css/main.7e3f24dc.chunk.css"
   },
   {
-    "revision": "0f973740d7235b692b49",
-    "url": "/cs356-desktop/static/js/main.0f973740.chunk.js"
+    "revision": "44853720b15fbd1eeae7",
+    "url": "/cs356-desktop/static/js/main.44853720.chunk.js"
   },
   {
-    "revision": "fc9f51c8a4d6d2e78e65",
+    "revision": "96e52b6bb4b98bc369b7",
     "url": "/cs356-desktop/static/css/1.f23841b3.chunk.css"
   },
   {
-    "revision": "fc9f51c8a4d6d2e78e65",
-    "url": "/cs356-desktop/static/js/1.fc9f51c8.chunk.js"
+    "revision": "96e52b6bb4b98bc369b7",
+    "url": "/cs356-desktop/static/js/1.96e52b6b.chunk.js"
   },
   {
     "revision": "6d00649a3a09e30476b2",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/cs356-desktop/static/media/photo.c76fd7ba.png"
   },
   {
-    "revision": "4c80355665aebfe9235a1c892be35ba8",
+    "revision": "9f4c36e47e139218354341bd0f5c9f9e",
     "url": "/cs356-desktop/index.html"
   }
 ];

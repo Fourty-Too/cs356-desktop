@@ -28,14 +28,16 @@ class ResultsPage extends React.Component {
 		var button1 = undefined;
 		var button2 = undefined;
 
+		//console.log(this.props.mileage);
+
 		if (this.state.width > 666) {
 			button1 = <Link to="allResults" className="btn btn-primary btn-lg" style={{marginLeft: 40, marginRight: 40, marginBottom: 40, float: 'left', width: 140}}>View All</Link>
 
 			button2 = <Link to="home" className="btn btn-primary btn-lg" style={{marginRight: 40, marginLeft: 40, marginBottom: 40, float: 'right', width: 140}}> Start Over</Link>
 		} else {
-			button1 = <Link to="allResults" className="btn btn-primary btn-lg" style={{marginLeft: 'auto', marginRight: 'auto', width: '75%', marginBottom: 40, float: 'left', width: 140}}>View All</Link>
+			button1 = <Link to="allResults" className="btn btn-primary btn-lg" style={{marginBottom: 40, float: 'left', width: 140}}>View All</Link>
 
-			button2 = <Link to="home" className="btn btn-primary btn-lg" style={{marginLeft: 'auto', marginRight: 'auto', width: '75%', marginBottom: 40, float: 'right', width: 140}}> Start Over</Link>
+			button2 = <Link to="home" className="btn btn-primary btn-lg" style={{marginBottom: 40, float: 'right', width: 140}}> Start Over</Link>
 		}
 
 		return (
