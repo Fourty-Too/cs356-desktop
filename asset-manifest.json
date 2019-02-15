@@ -1,16 +1,16 @@
 {
   "main.css": "/cs356-desktop/static/css/main.7e3f24dc.chunk.css",
-  "main.js": "/cs356-desktop/static/js/main.0f973740.chunk.js",
-  "main.js.map": "/cs356-desktop/static/js/main.0f973740.chunk.js.map",
+  "main.js": "/cs356-desktop/static/js/main.44853720.chunk.js",
+  "main.js.map": "/cs356-desktop/static/js/main.44853720.chunk.js.map",
   "static/css/1.f23841b3.chunk.css": "/cs356-desktop/static/css/1.f23841b3.chunk.css",
-  "static/js/1.fc9f51c8.chunk.js": "/cs356-desktop/static/js/1.fc9f51c8.chunk.js",
-  "static/js/1.fc9f51c8.chunk.js.map": "/cs356-desktop/static/js/1.fc9f51c8.chunk.js.map",
+  "static/js/1.96e52b6b.chunk.js": "/cs356-desktop/static/js/1.96e52b6b.chunk.js",
+  "static/js/1.96e52b6b.chunk.js.map": "/cs356-desktop/static/js/1.96e52b6b.chunk.js.map",
   "runtime~main.js": "/cs356-desktop/static/js/runtime~main.6d00649a.js",
   "runtime~main.js.map": "/cs356-desktop/static/js/runtime~main.6d00649a.js.map",
   "static/media/photo.png": "/cs356-desktop/static/media/photo.c76fd7ba.png",
   "static/css/main.7e3f24dc.chunk.css.map": "/cs356-desktop/static/css/main.7e3f24dc.chunk.css.map",
   "static/css/1.f23841b3.chunk.css.map": "/cs356-desktop/static/css/1.f23841b3.chunk.css.map",
   "index.html": "/cs356-desktop/index.html",
-  "precache-manifest.476c8d70762493c75122b48fb29df85f.js": "/cs356-desktop/precache-manifest.476c8d70762493c75122b48fb29df85f.js",
+  "precache-manifest.b4be39bddc7541fb0202829ec3d47d4d.js": "/cs356-desktop/precache-manifest.b4be39bddc7541fb0202829ec3d47d4d.js",
   "service-worker.js": "/cs356-desktop/service-worker.js"
 }
