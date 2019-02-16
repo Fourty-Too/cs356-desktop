@@ -9,3 +9,11 @@
   margin-left: -150px;
   margin-top: -60px;
 }
+
+table {
+  border-collapse: collapse;
+}
+
+table td {
+  border-bottom: 0.25px solid grey;
+}

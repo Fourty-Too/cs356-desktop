@@ -8,7 +8,15 @@ class AllResults extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = this.props.location.state;
-	  this.setState({ width: 0, height: 0 });
+		this.state = {
+			width: 0,
+			height: 0,
+			make: this.props.location.state.make,
+			model: this.props.location.state.model,
+			year: this.props.location.state.year,
+			mileage: this.props.location.state.mileage,
+			maintenance: this.props.location.state.maintenance
+		}
 		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 	}
 
@@ -28,6 +36,17 @@ class AllResults extends React.Component {
 	render() {
 		var button1 = undefined;
 		var button2 = undefined;
+
+		let rows = this.state.maintenance.map(item => {
+			console.log(item);
+			return (
+							 <tr style={{borderBottom: "1px solid-black", borderCollapse: "collapse"}}>
+								<td>{item[0]}</td>
+								<td>{item[1]}</td>
+								<hr/>
+							 </tr>
+)
+		});
 
 		if (this.state.width > 666) {
 			button1 = <Link to={{pathname: "../results",
@@ -49,24 +68,15 @@ class AllResults extends React.Component {
 					<div className="jumbotron text-start" style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#DBEEF4',   borderRadius: '5px',
 						boxShadow: '10px 10px 10px grey', paddingBottom: 100, marginBottom: 20}}>
 
-						<table style={{width: "91%", marginLeft: "auto", marginRight: "auto", height: 214, textAlign: "left", borderBottom: "1px solid-black", overflow: "scroll"}}>
-							<tbody>
+						<table style={{width: "91%", marginLeft: "auto", marginRight: "auto", height: 214, textAlign: "left", borderBottom: "1px solid-black", overflow: "scroll", borderCollapse: "collapse"}}>
+							<thead>
 								<tr className="top">
 							    <th>Mileage</th>
 							    <th>Maintenance Item</th>
 							  </tr>
-							  <tr>
-							    <td>5000</td>
-							    <td>Maintenance Item 1</td>
-							  </tr>
-							  <tr>
-							    <td>10000</td>
-							    <td>Maintenance Item 2</td>
-							  </tr>
-								<tr>
-									<td>20000</td>
-									<td>Maintenance Item 3</td>
-								</tr>
+								</thead>
+								<tbody>
+							  {rows}
 							</tbody>
 						</table>
 

@@ -102,7 +102,7 @@ class ResultsPage extends React.Component {
 			//console.log(currentMileage);
 			//console.log(current % currentMileage);
 
-			if (Math.abs(currentMileage - current) <= 1000) {
+			if (Math.abs(currentMileage - current) <= 1000 && currentMileage <= current) {
 				near = true;
 				index = i;
 				break;
