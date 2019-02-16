@@ -39,12 +39,14 @@ class HomePage extends React.Component {
 		var inputYear = document.getElementById('yearInput');
 		var inputTrim = document.getElementById('trimInput');
 		var inputMileage = document.getElementById('mileageInput');
+		var mileageValue = inputMileage.value;
+		mileageValue = mileageValue.split(",").join("");
     this.setState({
 			make: inputMake.value,
 			model: inputModel.value,
 			year: inputYear.value,
 			trim: inputTrim.value,
-      mileage: inputMileage.value
+      mileage: mileageValue
     }, () =>
     console.log(
       this.state
@@ -78,6 +80,23 @@ class HomePage extends React.Component {
 			this.setState({
 				trims: [<option key={0} value="trimChoice">Choose a Trim Level</option>,
 								<option key={1} value="1.6L I4">1.6L I4</option>]
+			})
+		}
+
+		if (inputYear.value === "yearChoice") {
+			this.setState({
+				trims: [<option key={0} value="trimChoice">Choose a Trim Level</option>]
+			})
+		} else if (inputModel.value === "modelChoice") {
+			this.setState({
+				years: [<option key={0} value="yearChoice">Choose a Year</option>],
+				trims: [<option key={0} value="trimChoice">Choose a Trim Level</option>]
+			})
+		} else if (inputMake.value === "makeChoice") {
+			this.setState({
+				models: [<option key={0} value="modelChoice">Choose a Model</option>],
+				years: [<option key={0} value="yearChoice">Choose a Year</option>],
+				trims: [<option key={0} value="trimChoice">Choose a Trim Level</option>]
 			})
 		}
 
