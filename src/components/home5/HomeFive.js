@@ -5,7 +5,7 @@ function changeBackground(color) {
 	document.body.style.background = color;
 }
 
-class Home5 extends React.Component {
+class HomeFive extends React.Component {
 	constructor(props) {
 	 super(props);
 	 this.state = {
@@ -98,4 +98,4 @@ class Home5 extends React.Component {
 	}
 }
 
-export default Home5;
+export default HomeFive;

@@ -6,19 +6,21 @@ function changeBackground(color) {
 	document.body.style.background = color;
 }
 
-class Home2 extends React.Component {
+class HomeThree extends React.Component {
 	constructor(props) {
 	 super(props);
 
 	 this.state = {
 			mileage: 0,
 			year: this.props.location.state.year,
-			make: "",
+			make: this.props.location.state.make,
+			model: ""
 	 };
 
 	 this.routeChange = this.routeChange.bind(this);
-	 this.getMakes = this.getMakes.bind(this);
-	 this.setState = this.setState.bind(this);
+	 this.routeChangeBack = this.routeChangeBack.bind(this);
+	 //this.getMakes = this.getMakes.bind(this);
+	 this.getModels = this.getModels.bind(this);
 
 	 console.log(this.state);
 	}
@@ -26,42 +28,38 @@ class Home2 extends React.Component {
 	componentDidMount() {
 		var button = document.getElementById("nextButton");
 		button.setAttribute("disabled","true");
+		this.getModels();
     // set el height and width etc.
   }
 
+	routeChangeBack(){
+		this.setState({model: ""}, () => this.props.history.push({
+  		pathname: '../home2',
+  		state: this.state
+		}))
+ 	}
+
 	routeChange(){
 		this.setState({}, () => this.props.history.push({
-			pathname: '../home3',
+			pathname: '../home4',
 			state: this.state
 		}))
 	}
 
-	displaySelected() {
-		var makes = document.getElementsByClassName("vertical");
-
-		for (var i = 0; i < makes.length; i++) {
-			var element = document.getElementById(i.toString());
-			var make = element.children[1].innerHTML;
-
-			if (make === this.state.make) {
-				element.setAttribute("class","verticalSelected");
-
-				this.state.done = "true";
-
-				break;
-			}
-		}
-	}
-
-	getMakes() {
-		var url = "https://www.fueleconomy.gov/ws/rest/vehicle/menu/make?year=";
+	getModels() {
+		var url = "https://www.fueleconomy.gov/ws/rest/vehicle/menu/model?year=";
 
 		var yearNumber = this.props.location.state.year;
 
 		url = url + yearNumber;
 
-		url = url.split(" ").join("+");
+		url = url + "&make=";
 
+		var make = this.props.location.state.make;
+
+		url = url + make;
+
+		url = url.split(" ").join("+");
 
 		var that = this;
 
@@ -96,16 +94,15 @@ class Home2 extends React.Component {
 				div.setAttribute("class", "vertical");
 				div.setAttribute("id", i.toString());
 				div.onclick = function() {
+					var models = document.getElementsByClassName("vertical");
 
-					var makes = document.getElementsByClassName("vertical");
-
-					for (var i = 0; i < makes.length; i++) {
+					for (var i = 0; i < models.length; i++) {
 						document.getElementById(i.toString()).setAttribute("style","");
 					}
 
 					this.setAttribute("style", "background-color: #007bff; color: white; border-radius: 7px");
 
-					that.state.make = this.children[1].innerHTML;
+					that.state.model = this.children[1].innerHTML;
 
 
 					var nextButton = document.getElementById("nextButton");
@@ -138,8 +135,6 @@ class Home2 extends React.Component {
 	render() {
 		changeBackground("#D3D3D3");
 
-		this.getMakes();
-		
 		return (
 			<div className="container-fluid" style={{backgroundColor: "#D3D3D3", overflow: "scroll", width: '100%', padding: 0, margin: 0, height: '100%'}}>
 				<div className="text-center" style={{backgroundColor: "white", width: '100%', height: '100%', padding: 0, margin: 0}}>
@@ -155,16 +150,16 @@ class Home2 extends React.Component {
 				<br></br>
 
 				<div className="text-center" style={{backgroundColor: "#D3D3D3", width: '100%', height: '100%', padding: 0, margin: 0}}>
-					<h3 style={{textAlign: "left", width: "75%", marginLeft: "auto", marginRight: "auto"}}>Your Car: {this.props.location.state.year} __</h3>
+				<h3 style={{textAlign: "left", width: "75%", marginLeft: "auto", marginRight: "auto"}}>Your Car: {this.props.location.state.year} {this.props.location.state.make} __</h3>
 					<div id="main" className="jumbotron text-start" style={{justifyContent: 'center', alignItems: 'center', width: '75%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: '#DBEEF4',   borderRadius: '5px',
 					  boxShadow: '10px 10px 10px grey'}}>
 
-						<p>Select a make</p>
+						<p>Select a model</p>
 
 						<div id="main2">
 						</div>
 
-						<Link to="home" className="btn btn-primary btn-lg" style={{marginLeft:40, marginRight:40, marginBottom:"30px", marginTop:"5px", float:"left", width:"100px"}} >Back</Link>
+						<button className="btn btn-primary btn-lg" style={{marginLeft:40, marginRight:40, marginBottom:"30px", marginTop:"5px", float:"left", width:"100px"}} onClick={this.routeChangeBack}>Back</button>
 						<button id="nextButton" className="btn btn-primary btn-lg" style={{marginRight:40, marginLeft:40, marginBottom:"30px", marginTop:"5px", float:"right", width:"100px"}} onClick={this.routeChange}> Next</button>
 
 						<br/>
@@ -176,4 +171,4 @@ class Home2 extends React.Component {
 	}
 }
 
-export default Home2;
+export default HomeThree;
