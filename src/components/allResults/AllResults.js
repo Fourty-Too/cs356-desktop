@@ -39,12 +39,20 @@ class AllResults extends React.Component {
 
 		let rows = this.state.maintenance.map(item => {
 			console.log(item);
+			var maintenanceList = item[2].split("\n");
 			return (
-							 <tr style={{borderBottom: "1px solid-black", borderCollapse: "collapse"}}>
-								<td>{item[0]}</td>
-								<td>{item[1]}</td>
-								<hr/>
+							<div>
+							 <tr class="collapsible" style={{display: "flex"}}>
+								<td style={{width: "24%", marginLeft: "20px"}}>{item[0]}</td>
+								<td style={{width: "44%"}}>{item[1]}</td>
+								<td style={{width: "32%"}}></td>
 							 </tr>
+							 <div class="content">
+								 <ul style={{textAlign: "left", fontSize: "25px"}}>
+										 {maintenanceList.map((el,j) => <li style={{fontSize: "15px"}}><p style={{fontSize: "15px"}}>{el}</p></li> )}
+								 </ul>
+							 </div>
+							 </div>
 )
 		});
 
@@ -61,24 +69,43 @@ class AllResults extends React.Component {
 			button2 = <Link to="home" className="btn btn-primary btn-lg" style={{marginLeft: 'auto', marginRight: 'auto', width: '75%', marginBottom: 40, float: 'right', width: 140}}> Start Over</Link>
 		}
 
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var content = this.nextElementSibling;
+		    if (content.style.display === "block") {
+		      content.style.display = "none";
+		    } else {
+		      content.style.display = "block";
+		    }
+		  });
+		}
+
 		return (
 			<div className="text-center" style={{padding: '2rem 5rem', width: "100%", marginLeft: 'auto', marginRight: 'auto', display: 'inline-block', backgroundColor: "#D3D3D3", height: '80%'}}>
 			<h1>Your Car:  </h1> <h3>{this.props.location.state.year} {this.props.location.state.make} {this.props.location.state.model} {this.props.location.state.trim}, {this.props.location.state.mileage} miles</h3>
 
 					<div className="jumbotron text-start" style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#DBEEF4',   borderRadius: '5px',
-						boxShadow: '10px 10px 10px grey', paddingBottom: 100, marginBottom: 20}}>
+						boxShadow: '10px 10px 10px grey', paddingBottom: 90, marginBottom: 20}}>
 
-						<table style={{width: "91%", marginLeft: "auto", marginRight: "auto", height: 214, textAlign: "left", borderBottom: "1px solid-black", overflow: "scroll", borderCollapse: "collapse"}}>
+						<div style={{overflowX: "auto"}}>
+
+						<table class="scroll">
 							<thead>
 								<tr className="top">
-							    <th>Mileage</th>
-							    <th>Maintenance Item</th>
+							    <th style={{width: "1%"}}>Mileage</th>
+							    <th>Maintenance Type</th>
+									<th></th>
 							  </tr>
 								</thead>
 								<tbody>
 							  {rows}
 							</tbody>
 						</table>
+						</div>
 
 						<br/> <br/>
 

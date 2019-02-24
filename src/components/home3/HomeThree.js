@@ -23,6 +23,8 @@ class HomeThree extends React.Component {
 	 this.getModels = this.getModels.bind(this);
 
 	 console.log(this.state);
+
+	 this.render();
 	}
 
 	componentDidMount() {
@@ -79,7 +81,7 @@ class HomeThree extends React.Component {
 			number.setAttribute("id", "length");
 			number.setAttribute("text", length.toString());
 
-			document.getElementById("main2").innerHTML = xml.getElementsByTagName("text")[1].childNodes[0].nodeValue;
+			document.getElementById("main2s").innerHTML = xml.getElementsByTagName("text")[1].childNodes[0].nodeValue;
 
 			var newHTML = "";
 			newHTML += "<div id=\"grids\" class=\"portfolio\">";
@@ -87,7 +89,7 @@ class HomeThree extends React.Component {
 			newHTML += "</div>";
 			newHTML += "<br/><br/>";
 
-			document.getElementById("main2").innerHTML = newHTML;
+			document.getElementById("main2s").innerHTML = newHTML;
 
 			for (var i = 0; i < length; i++) {
 				var div = document.createElement("div");
@@ -122,13 +124,11 @@ class HomeThree extends React.Component {
 
 		})
 		.catch(err => {
+			var message = document.getElementById("loading3");
+			var newHTML = "<h2>No results found.</h2>";
+			message.innerHTML = newHTML;
 			return;
 		})
-	}
-
-	changeItem() {
-		var input = document.getElementById('mileageInput');
-		console.log(input.value);
 	}
 
 
@@ -156,7 +156,9 @@ class HomeThree extends React.Component {
 
 						<p>Select a model</p>
 
-						<div id="main2">
+						<div id="main2s">
+						<h2 id="loading3">Loading...</h2>
+
 						</div>
 
 						<button className="btn btn-primary btn-lg" style={{marginLeft:40, marginRight:40, marginBottom:"30px", marginTop:"5px", float:"left", width:"100px"}} onClick={this.routeChangeBack}>Back</button>

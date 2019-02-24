@@ -21,6 +21,8 @@ class HomePage extends React.Component {
 	 //this.getBeginning = this.getBeginning.bind(this);
 	 this.saveState = this.saveState.bind(this);
 	 this.routeChange = this.routeChange.bind(this);
+	 this.onlyNumbers = this.onlyNumbers.bind(this);
+	 this.handleEnter = this.handleEnter.bind(this);
 	 //this.getMakes = this.getMakes.bind(this);
 	 console.log(this.state);
 	}
@@ -53,15 +55,29 @@ class HomePage extends React.Component {
 		console.log(input.value);
 	}
 
+	onlyNumbers(e){
+		 const re = /[0-9:]+/g;
+		 if (!re.test(e.key)) {
+			 e.preventDefault();
+		 }
+
+		 this.handleEnter(e);
+	}
+
+	handleEnter(e) {
+		if (e.key === 'Enter') {
+			this.routeChange();
+		}
+	}
 
 	render() {
 		changeBackground("#D3D3D3");
 
 		//const isEnabled = (this.state.mileage !== "" || this.state.mileage > 0) && this.state.trim !== "trimChoice";
 
-		const isEnabled = (this.state.year !== "" && this.state.year !== 0);
+		const isEnabled = (this.state.year.length === 4);
 
-		var inputText = <input id="yearInput" type="text" style={{width: '50%'}} onChange={this.saveState}></input>;
+		var inputText = <input id="yearInput" type="text" name="txtNumber" maxLength="4" min='0' max='9' value={this.state.value} style={{width: '50%'}} onChange={this.saveState} onKeyPress={(e) => this.onlyNumbers(e)}></input>;
 		var goButton = 	<button id="submitButton" className="btn btn-primary btn-lg text-center" onClick={this.routeChange} disabled={!isEnabled}>Go</button>;
 
 
@@ -84,7 +100,7 @@ class HomePage extends React.Component {
 					<div id="main" className="jumbotron text-start" style={{justifyContent: 'center', alignItems: 'center', width: '75%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: '#DBEEF4',   borderRadius: '5px',
 					  boxShadow: '10px 10px 10px grey'}}>
 
-						<p>Enter your car's model year</p>
+						<p>Enter your car's model year (Years 1984-2020 supported)</p>
 
 						{inputText}
 					<br/>

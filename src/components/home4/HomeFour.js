@@ -93,7 +93,7 @@ class HomeFour extends React.Component {
 			number.setAttribute("id", "length");
 			number.setAttribute("text", length.toString());
 
-			document.getElementById("main2").innerHTML = xml.getElementsByTagName("text")[0].childNodes[0].nodeValue;
+			document.getElementById("themain2").innerHTML = xml.getElementsByTagName("text")[0].childNodes[0].nodeValue;
 
 			var newHTML = "";
 			newHTML += "<div id=\"grids\" class=\"portfolio\">";
@@ -101,7 +101,7 @@ class HomeFour extends React.Component {
 			newHTML += "</div>";
 			newHTML += "<br/><br/>";
 
-			document.getElementById("main2").innerHTML = newHTML;
+			document.getElementById("themain2").innerHTML = newHTML;
 
 			for (var i = 0; i < length; i++) {
 				var div = document.createElement("div");
@@ -136,6 +136,9 @@ class HomeFour extends React.Component {
 
 		})
 		.catch(err => {
+			var message = document.getElementById("loading4");
+			var newHTML = "<h2>No results found.</h2>";
+			message.innerHTML = newHTML;
 			return;
 		})
 	}
@@ -150,6 +153,8 @@ class HomeFour extends React.Component {
 		changeBackground("#D3D3D3");
 
 		//this.getTrims();
+
+		console.log(this.state);
 
 		return (
 			<div className="container-fluid" style={{backgroundColor: "#D3D3D3", overflow: "scroll", width: '100%', padding: 0, margin: 0, height: '100%'}}>
@@ -167,12 +172,13 @@ class HomeFour extends React.Component {
 
 				<div className="text-center" style={{backgroundColor: "#D3D3D3", width: '100%', height: '100%', padding: 0, margin: 0}}>
 				<h3 style={{textAlign: "left", width: "75%", marginLeft: "auto", marginRight: "auto"}}>Your Car: {this.props.location.state.year} {this.props.location.state.make} {this.props.location.state.model} __</h3>
-					<div id="main" className="jumbotron text-start" style={{justifyContent: 'center', alignItems: 'center', width: '75%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: '#DBEEF4',   borderRadius: '5px',
+					<div id="themain" className="jumbotron text-start" style={{justifyContent: 'center', alignItems: 'center', width: '75%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: '#DBEEF4',   borderRadius: '5px',
 					  boxShadow: '10px 10px 10px grey'}}>
 
 						<p>Select a trim level</p>
 
-						<div id="main2">
+						<div id="themain2">
+						<h2 id="loading4">Loading...</h2>
 						</div>
 
 						<button className="btn btn-primary btn-lg" style={{marginLeft:40, marginRight:40, marginBottom:"30px", marginTop:"5px", float:"left", width:"100px"}} onClick={this.routeChangeBack}>Back</button>

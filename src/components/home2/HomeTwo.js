@@ -26,6 +26,7 @@ class HomeTwo extends React.Component {
 	componentDidMount() {
 		var button = document.getElementById("nextButton");
 		button.setAttribute("disabled","true");
+		this.getMakes();
     // set el height and width etc.
   }
 
@@ -81,10 +82,16 @@ class HomeTwo extends React.Component {
 			number.setAttribute("id", "length");
 			number.setAttribute("text", length.toString());
 
+			console.log(xml);
+
 			document.getElementById("main2").innerHTML = xml.getElementsByTagName("text")[1].childNodes[0].nodeValue;
 
 			var newHTML = "";
 			newHTML += "<div id=\"grids\" class=\"portfolio\">";
+
+			if (length == 0) {
+				newHTML += "<h2>No results found.</h2>";
+			}
 
 			newHTML += "</div>";
 			newHTML += "<br/><br/>";
@@ -125,6 +132,10 @@ class HomeTwo extends React.Component {
 
 		})
 		.catch(err => {
+			console.log(err);
+			var message = document.getElementById("loading");
+			var newHTML = "<h2>No results found.</h2>";
+			message.innerHTML = newHTML;
 			return;
 		})
 	}
@@ -137,8 +148,6 @@ class HomeTwo extends React.Component {
 
 	render() {
 		changeBackground("#D3D3D3");
-
-		this.getMakes();
 
 		return (
 			<div className="container-fluid" style={{backgroundColor: "#D3D3D3", overflow: "scroll", width: '100%', padding: 0, margin: 0, height: '100%'}}>
@@ -162,6 +171,7 @@ class HomeTwo extends React.Component {
 						<p>Select a make</p>
 
 						<div id="main2">
+						<h2 id="loading">Loading...</h2>
 						</div>
 
 						<Link to="home" className="btn btn-primary btn-lg" style={{marginLeft:40, marginRight:40, marginBottom:"30px", marginTop:"5px", float:"left", width:"100px"}} >Back</Link>

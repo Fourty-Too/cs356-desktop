@@ -1,3 +1,7 @@
+li {
+  font-size: 10px;
+}
+
 .navbar {
   background-color: #4197AB;
 }
@@ -36,6 +40,10 @@
   display: block;
 }
 
+.display-linebreak {
+  white-space: pre-line;
+}
+
 .image {
   background-color: #eee;
   display: inline-block;
@@ -48,10 +56,113 @@
   display: block;
 }
 
-table {
-  border-collapse: collapse;
+.react-phone-number-input__icon {
+  padding-top: -6px;
+  padding-bottom: 13px;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+.react-phone-number-input__icon-image {
+  padding-top: 0px;
+}
+
+.react-phone-number-input__country {
+  padding-top: -6px;
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  height: 3px;
 }
 
 table td {
   border-bottom: 0.25px solid grey;
+}
+
+table.scroll {
+  width: 93%;
+  margin-left: auto;
+  margin-right: auto;
+  /* Optional */
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+}
+
+table.scroll tbody,
+table.scroll thead {
+  display: block;
+}
+
+thead tr th {
+  height: 30px;
+  line-height: 30px;
+  /*text-align: left;*/
+}
+
+table.scroll tbody {
+  height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+tbody {
+  border-top: 1px solid black;
+}
+
+tbody td, thead th {
+  width: 20%;
+  /* Optional */
+}
+
+tbody td:last-child, thead th:last-child {
+  border-right: none;
+}
+
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.copy {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  display: none;
+  overflow: hidden;
+}
+
+.collapsible:after {
+  content: '\02795';
+  /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.active:after {
+  content: "\2796";
+  /* Unicode character for "minus" sign (-) */
 }
