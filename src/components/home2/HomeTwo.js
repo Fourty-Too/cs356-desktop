@@ -1,6 +1,51 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LogoImg from './NoImage.jpeg';
+import Acura from './Acura.png';
+import AlfaRomeo from './AlfaRomeo.png';
+import Audi from './Audi.png';
+import Bentley from './Bentley.png';
+import BMW from './BMW.png';
+import Bugatti from './Bugatti.png';
+import Buick from './Buick.png';
+import Cadillac from './Cadillac.png';
+import Chevrolet from './Chevrolet.png';
+import Chrysler from './Chrysler.png';
+import Daewoo from './Daewoo.png';
+import Dodge from './Dodge.png';
+import Ferrari from './Ferrari.png';
+import Ford from './Ford.png';
+import Honda from './Honda.png';
+import Hyundai from './Hyundai.png';
+import Infiniti from './Infiniti.png';
+import Isuzu from './Isuzu.png';
+import Jaguar from './Jaguar.png';
+import Jeep from './Jeep.png';
+import Kia from './Kia.png';
+import Koenigsegg from './Koenigsegg.png';
+import Porsche from './Porsche.png';
+import Lamborghini from './Lamborghini.png';
+import LandRover from './LandRover.png';
+import Lexus from './Lexus.png';
+import Lincoln from './Lincoln.png';
+import Lotus from './Lotus.png';
+import Mazda from './Mazda.png';
+import MercedesBenz from './Mercedes-Benz.png';
+import Mercury from './Mercury.png';
+import Mitsubishi from './Mitsubishi.png';
+import Nissan from './Nissan.png';
+import Oldsmobile from './Oldsmobile.png';
+import Pagani from './Pagani.png';
+import Plymouth from './Plymouth.png';
+import Pontiac from './Pontiac.png';
+import RollsRoyce from './Rolls-Royce.png';
+import Saab from './Saab.png';
+import Saturn from './Saturn.png';
+import Subaru from './Subaru.png';
+import Suzuki from './Suzuki.png';
+import Toyota from './Toyota.png';
+import Volkswagen from './Volkswagen.png';
+import Volvo from './Volvo.png';
 
 function changeBackground(color) {
 	document.body.style.background = color;
@@ -120,7 +165,149 @@ class HomeTwo extends React.Component {
 				}
 
 				newHTML = "";
-				newHTML += "<img src=" + LogoImg + " class=\"image\" />"
+
+				console.log("THANKFSDF");
+				console.log(that.state.make);
+				console.log(elements[i].childNodes[0].nodeValue);
+
+				if (elements[i].childNodes[0].nodeValue === "Acura") {
+					newHTML += "<img src=" + Acura + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Alfa Romeo") {
+					newHTML += "<img src=" + AlfaRomeo + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Audi") {
+					newHTML += "<img src=" + Audi + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Bentley") {
+					newHTML += "<img src=" + Bentley + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "BMW") {
+					newHTML += "<img src=" + BMW + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Bugatti") {
+					newHTML += "<img src=" + Bugatti + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Buick") {
+					newHTML += "<img src=" + Buick + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Cadillac") {
+					newHTML += "<img src=" + Cadillac + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Chevrolet") {
+					newHTML += "<img src=" + Chevrolet + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Chrysler") {
+					newHTML += "<img src=" + Chrysler + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Daewoo") {
+					newHTML += "<img src=" + Daewoo + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Dodge") {
+					newHTML += "<img src=" + Dodge + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Ferrari") {
+					newHTML += "<img src=" + Ferrari + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Ford") {
+					newHTML += "<img src=" + Ford + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Honda") {
+					newHTML += "<img src=" + Honda + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Lamborghini") {
+					newHTML += "<img src=" + Lamborghini + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Porsche") {
+					newHTML += "<img src=" + Porsche + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Lotus") {
+					newHTML += "<img src=" + Lotus + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Hyundai") {
+					newHTML += "<img src=" + Hyundai + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Infiniti") {
+					newHTML += "<img src=" + Infiniti + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Isuzu") {
+					newHTML += "<img src=" + Isuzu + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Jaguar") {
+					newHTML += "<img src=" + Jaguar + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Jeep") {
+					newHTML += "<img src=" + Jeep + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Kia") {
+					newHTML += "<img src=" + Kia + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Koenigsegg") {
+					newHTML += "<img src=" + Koenigsegg + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Land Rover") {
+					newHTML += "<img src=" + LandRover + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Lexus") {
+					newHTML += "<img src=" + Lexus + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Lincoln") {
+					newHTML += "<img src=" + Lincoln + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Mazda") {
+					newHTML += "<img src=" + Mazda + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Mercedes-Benz") {
+					newHTML += "<img src=" + MercedesBenz + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Mercury") {
+					newHTML += "<img src=" + Mercury + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Mitsubishi") {
+					newHTML += "<img src=" + Mitsubishi + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Nissan") {
+					newHTML += "<img src=" + Nissan + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Oldsmobile") {
+					newHTML += "<img src=" + Oldsmobile + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Pagani") {
+					newHTML += "<img src=" + Pagani + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Plymouth") {
+					newHTML += "<img src=" + Plymouth + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Pontiac") {
+					newHTML += "<img src=" + Pontiac + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Rolls-Royce") {
+					newHTML += "<img src=" + RollsRoyce + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Saab") {
+					newHTML += "<img src=" + Saab + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Saturn") {
+					newHTML += "<img src=" + Saturn + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Subaru") {
+					newHTML += "<img src=" + Subaru + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Suzuki") {
+					newHTML += "<img src=" + Suzuki + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Toyota") {
+					newHTML += "<img src=" + Toyota + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Volkswagen") {
+					newHTML += "<img src=" + Volkswagen + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Volvo") {
+					newHTML += "<img src=" + Volvo + " class=\"image\" />"
+				}
+				else {
+					newHTML += "<img src=" + LogoImg + " class=\"image\" />"
+				}
 				newHTML += "<p>" + elements[i].childNodes[0].nodeValue + "</p>";
 				newHTML += "</div>";
 
