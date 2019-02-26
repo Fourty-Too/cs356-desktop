@@ -18,6 +18,8 @@ class ResultsPage extends React.Component {
 		this.state = {
 			width: 0,
 			height: 0,
+			first: "",
+			second: "",
 			make: this.props.location.state.make,
 			model: this.props.location.state.model,
 			year: this.props.location.state.year,
@@ -74,6 +76,8 @@ class ResultsPage extends React.Component {
 		//console.log(this.props.location.state);
 	  this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 		this.onlyNumbers = this.onlyNumbers.bind(this);
+		this.saveState = this.saveState.bind(this);
+		this.saveStateTwo = this.saveStateTwo.bind(this);
 	}
 
 	componentDidMount() {
@@ -90,10 +94,42 @@ class ResultsPage extends React.Component {
 	}
 
 	onlyNumbers(e){
-		 const re = /[0-9:]+/g;
+		 const re = /[1-7:]+/g;
 		 if (!re.test(e.key)) {
 			 e.preventDefault();
 		 }
+	}
+
+	saveState() {
+		var first = document.getElementById('first');
+		var firstValue = first.value;
+
+		//var second = document.getElementById('second');
+		//var secondValue = second.value;
+
+		this.setState({
+			first: firstValue,
+			//second: secondValue
+		}, () =>
+			console.log(
+				this.state
+			))
+	}
+
+	saveStateTwo() {
+		var second = document.getElementById('second');
+		var secondValue = second.value;
+
+		//var second = document.getElementById('second');
+		//var secondValue = second.value;
+
+		this.setState({
+			second: secondValue,
+			//second: secondValue
+		}, () =>
+			console.log(
+				this.state
+			))
 	}
 
 	render() {
@@ -105,6 +141,9 @@ class ResultsPage extends React.Component {
 		var currentMileage = Number(this.props.location.state.mileage);
 		var index = undefined;
 		var numTimes = 0;
+
+		const firstEnabled = (this.state.first.length === 1);
+		const secondEnabled = (this.state.second.length === 14);
 
 		//console.log(maintenance);
 		//console.log(this.state);
@@ -168,8 +207,8 @@ class ResultsPage extends React.Component {
 											<br/>
 											<p>Number of days per week:</p>
 											<div style={{marginLeft: "auto", marginRight: "auto", width: "90%", display: "inline-block"}}>
-											<input type="text" style={{marginLeft: "10px", marginRight:"10px", width: '75%'}} onKeyPress={(e) => this.onlyNumbers(e)}></input>
-											<Popup trigger={<button className="btn btn-primary btn-sm" style={{marginBottom:"10px", marginTop:"5px", height: "100%"}} onClick={close}>Next</button>} style={{marginLeft: "auto", marginRight: "auto", width: "400"}} modal>
+											<input id="first" type="text" maxLength="1" min='1' max='7' style={{marginLeft: "10px", marginRight:"10px", width: '75%'}} onKeyPress={(e) => this.onlyNumbers(e)} onChange={this.saveState}></input>
+											<Popup trigger={<button className="btn btn-primary btn-sm" style={{marginBottom:"10px", marginTop:"5px", height: "100%"}} onClick={this.close} disabled={!firstEnabled}>Next</button>} style={{marginLeft: "auto", marginRight: "auto", width: "400"}} modal>
 												<a className="close" onClick={close}>
 													&times;
 												</a>
@@ -180,10 +219,11 @@ class ResultsPage extends React.Component {
 												<p>Phone number:</p>
 												<div style={{marginLeft: "auto", marginRight: "auto", width: "90%", display: "inline-block"}}>
 												<PhoneInput
+													id="second"
 													country="US"
 												  value={ this.state.value }
-												  onChange={ value => this.setState({ value }) }/>
-													<Popup trigger={												<button className="btn btn-primary btn-sm" style={{marginBottom:"10px", marginTop:"5px", height: "100%"}} >Sign Me Up!</button>} style={{marginLeft: "auto", marginRight: "auto", width: "400"}} modal>
+												  onChange={this.saveStateTwo} maxLength="14"/>
+													<Popup trigger={<button className="btn btn-primary btn-sm" style={{marginBottom:"10px", marginTop:"5px", height: "100%"}} disabled={!secondEnabled}>Sign Me Up!</button>} style={{marginLeft: "auto", marginRight: "auto", width: "400"}} modal>
 														<a className="close" onClick={close}>
 															&times;
 														</a>
