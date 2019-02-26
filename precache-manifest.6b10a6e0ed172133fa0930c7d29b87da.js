@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "bd945bd0e508d6c2b5f3",
-    "url": "/cs356-desktop/static/css/main.a74c00ec.chunk.css"
+    "revision": "e59d67d15343c39ed089",
+    "url": "/cs356-desktop/static/css/main.ef2412a0.chunk.css"
   },
   {
-    "revision": "bd945bd0e508d6c2b5f3",
-    "url": "/cs356-desktop/static/js/main.bd945bd0.chunk.js"
+    "revision": "e59d67d15343c39ed089",
+    "url": "/cs356-desktop/static/js/main.e59d67d1.chunk.js"
   },
   {
     "revision": "6ac97d5d560df85a03ca",
@@ -216,7 +216,7 @@ self.__precacheManifest = [
     "url": "/cs356-desktop/static/media/Volvo.9bea8100.png"
   },
   {
-    "revision": "efd9bae911c85d5fa2d95cf914af1338",
+    "revision": "b0ad58df25c5bf5a866379e9f9ede4b2",
     "url": "/cs356-desktop/index.html"
   }
 ];
