@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "2d3ea23eea3909d1730d",
+    "revision": "bd945bd0e508d6c2b5f3",
     "url": "/cs356-desktop/static/css/main.a74c00ec.chunk.css"
   },
   {
-    "revision": "2d3ea23eea3909d1730d",
-    "url": "/cs356-desktop/static/js/main.2d3ea23e.chunk.js"
+    "revision": "bd945bd0e508d6c2b5f3",
+    "url": "/cs356-desktop/static/js/main.bd945bd0.chunk.js"
   },
   {
     "revision": "6ac97d5d560df85a03ca",
     "url": "/cs356-desktop/static/js/runtime~main.6ac97d5d.js"
   },
   {
-    "revision": "777e9013cb66d36923a7",
+    "revision": "88be6a898eaa7d77bc80",
     "url": "/cs356-desktop/static/css/2.77cec036.chunk.css"
   },
   {
-    "revision": "777e9013cb66d36923a7",
-    "url": "/cs356-desktop/static/js/2.777e9013.chunk.js"
+    "revision": "88be6a898eaa7d77bc80",
+    "url": "/cs356-desktop/static/js/2.88be6a89.chunk.js"
   },
   {
     "revision": "c76fd7bad885f278c357c281048c9c1c",
@@ -38,6 +38,10 @@ self.__precacheManifest = [
   {
     "revision": "4a7984c310933a2e94eb312cb0f6cc8a",
     "url": "/cs356-desktop/static/media/BMW.4a7984c3.png"
+  },
+  {
+    "revision": "53ee90b662e32c66d1468a900d0be449",
+    "url": "/cs356-desktop/static/media/Bertone.53ee90b6.png"
   },
   {
     "revision": "9eb8f74ef6d7b86f536b12449aa1d43e",
@@ -132,6 +136,14 @@ self.__precacheManifest = [
     "url": "/cs356-desktop/static/media/Lotus.afb988cb.png"
   },
   {
+    "revision": "2dd3d952582b436b6b836a6765c9e359",
+    "url": "/cs356-desktop/static/media/Peugeot.2dd3d952.png"
+  },
+  {
+    "revision": "6c0987fdb0d0a4157ad424a6dd96d4a0",
+    "url": "/cs356-desktop/static/media/Maserati.6c0987fd.png"
+  },
+  {
     "revision": "1560078c369c73afa23d736ef01f3de4",
     "url": "/cs356-desktop/static/media/Mazda.1560078c.png"
   },
@@ -168,6 +180,10 @@ self.__precacheManifest = [
     "url": "/cs356-desktop/static/media/Pontiac.dc800104.png"
   },
   {
+    "revision": "a264269c4ff93e9e5a0314351c2b423d",
+    "url": "/cs356-desktop/static/media/Renault.a264269c.png"
+  },
+  {
     "revision": "e9f563742abd20c0d9c98619a9b7fdc4",
     "url": "/cs356-desktop/static/media/Rolls-Royce.e9f56374.png"
   },
@@ -200,7 +216,7 @@ self.__precacheManifest = [
     "url": "/cs356-desktop/static/media/Volvo.9bea8100.png"
   },
   {
-    "revision": "f93256d735813dec81169c6fa7d5bad5",
+    "revision": "efd9bae911c85d5fa2d95cf914af1338",
     "url": "/cs356-desktop/index.html"
   }
 ];
