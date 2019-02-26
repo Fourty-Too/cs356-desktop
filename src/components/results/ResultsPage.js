@@ -195,25 +195,22 @@ class ResultsPage extends React.Component {
 									</div>
 									<h2>Complete maintenance by {Number(maintenance[index][0].split(",").join("")) + 240000 * numTimes} miles</h2>
 									<br/><br/>
-									<Popup trigger={<button className="btn btn-primary btn-lg" style={{marginLeft: "auto", marginRight: "auto", width: "50%", backgroundColor: "green"}} >Sign Up For Text Reminders</button>} position="top center" style={{marginLeft: "auto", marginRight: "auto", width: "400"}} modal close>
+									<Popup trigger={<button className="btn btn-primary btn-lg" style={{marginLeft: "auto", marginRight: "auto", width: "50%", backgroundColor: "green"}} >Sign Up For Text Reminders</button>} position="top center" style={{marginLeft: "auto", marginRight: "auto", width: "600"}} modal close>
 									{close => (
 										<div>
 											<a className="close" onClick={close}>
 												&times;
 											</a>
-											<h2>Tell us how often you drive your car</h2>
+											<h2>How many days per week do you drive your car?</h2>
 											<p>We'll use this information to tailor our reminders to your needs</p>
 											<hr style={{marginLeft: "auto", marginRight: "auto", width: "75%"}}/>
-											<br/>
-											<p>Number of days per week:</p>
 											<div style={{marginLeft: "auto", marginRight: "auto", width: "90%", display: "inline-block"}}>
 											<input id="first" type="text" maxLength="1" min='1' max='7' style={{marginLeft: "10px", marginRight:"10px", width: '75%'}} onKeyPress={(e) => this.onlyNumbers(e)} onChange={this.saveState}></input>
 											<Popup trigger={<button className="btn btn-primary btn-sm" style={{marginBottom:"10px", marginTop:"5px", height: "100%"}} onClick={this.close} disabled={!firstEnabled}>Next</button>} style={{marginLeft: "auto", marginRight: "auto", width: "400"}} modal>
 												<a className="close" onClick={close}>
 													&times;
 												</a>
-												<h2>Get reminders</h2>
-												<p>Enter your phone number and we'll send reminders to perform maintenance</p>
+												<h2>Enter your phone number</h2>
 												<hr style={{marginLeft: "auto", marginRight: "auto", width: "75%"}}/>
 												<br/>
 												<p>Phone number:</p>
@@ -285,7 +282,7 @@ class ResultsPage extends React.Component {
 
 		return (
 			<div className="text-center" style={{padding: '2rem 5rem', width: "100%", marginLeft: 'auto', marginRight: 'auto', display: 'inline-block', backgroundColor: "#D3D3D3", height: '80%'}}>
-			<h1>Your Car:  </h1> <h3>{this.props.location.state.year} {this.props.location.state.make} {this.props.location.state.model} {this.props.location.state.trim}, {this.props.location.state.mileage} miles</h3>
+			<h3><b style={{fontSize: "35px"}}>Your Car:</b> {this.props.location.state.year} {this.props.location.state.make} {this.props.location.state.model} {this.props.location.state.trim}, {this.props.location.state.mileage} miles</h3>
 
 					<div className="jumbotron text-start" style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#DBEEF4',   borderRadius: '5px',
 						boxShadow: '10px 10px 10px grey', paddingBottom: 100, marginBottom: 20}}>

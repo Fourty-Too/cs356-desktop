@@ -14,6 +14,13 @@ li {
   margin-top: -60px;
 }
 
+.centerNoAbsolute {
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -60px;
+}
+
 .portfolio {
   display: grid;
   height: 250px;

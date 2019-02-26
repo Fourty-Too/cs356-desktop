@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../images/photo.png';
 
 function changeBackground(color) {
 	document.body.style.background = color;
@@ -84,12 +85,12 @@ class HomePage extends React.Component {
 		return (
 			<div className="container-fluid" style={{backgroundColor: "#D3D3D3", overflow: "scroll", width: '100%', padding: 0, margin: 0, height: '100%'}}>
 				<div className="text-center" style={{backgroundColor: "white", width: '100%', height: '100%', padding: 0, margin: 0}}>
+					<div style={{width: "25%", marginLeft: "auto", marginRight: "auto", marginTop: -50, marginBottom: -90, padding: 0}}>
+					<img src={logo} alt="Logo" style={{height: 225, width: 300,  marginBottom: 20, marginTop: 2}}/>
+					</div>
 					<h1>My Car Maintenance</h1>
 					<hr width="50%">
 					</hr>
-					<br></br>
-					<Link to="about" className="btn btn-primary btn-lg">About Us</Link>
-					<br/><br/>
 					<br/>
 				</div>
 

@@ -4,8 +4,10 @@ import LogoImg from './NoImage.jpeg';
 import Acura from './Acura.png';
 import AlfaRomeo from './AlfaRomeo.png';
 import Audi from './Audi.png';
+import AstonMartin from './AstonMartin.png';
 import Bentley from './Bentley.png';
 import BMW from './BMW.png';
+import Bertone from './Bertone.png';
 import Bugatti from './Bugatti.png';
 import Buick from './Buick.png';
 import Cadillac from './Cadillac.png';
@@ -29,6 +31,8 @@ import LandRover from './LandRover.png';
 import Lexus from './Lexus.png';
 import Lincoln from './Lincoln.png';
 import Lotus from './Lotus.png';
+import Peugeot from './Peugeot.png';
+import Maserati from './Maserati.png';
 import Mazda from './Mazda.png';
 import MercedesBenz from './Mercedes-Benz.png';
 import Mercury from './Mercury.png';
@@ -36,8 +40,10 @@ import Mitsubishi from './Mitsubishi.png';
 import Nissan from './Nissan.png';
 import Oldsmobile from './Oldsmobile.png';
 import Pagani from './Pagani.png';
+import Pininfarina from './Pininfarina.png';
 import Plymouth from './Plymouth.png';
 import Pontiac from './Pontiac.png';
+import Renault from './Renault.png';
 import RollsRoyce from './Rolls-Royce.png';
 import Saab from './Saab.png';
 import Saturn from './Saturn.png';
@@ -305,6 +311,24 @@ class HomeTwo extends React.Component {
 				else if (elements[i].childNodes[0].nodeValue === "Volvo") {
 					newHTML += "<img src=" + Volvo + " class=\"image\" />"
 				}
+				else if (elements[i].childNodes[0].nodeValue === "Renault") {
+					newHTML += "<img src=" + Renault + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Peugeot") {
+					newHTML += "<img src=" + Peugeot + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Pininfarina") {
+					newHTML += "<img src=" + Pininfarina + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Maserati") {
+					newHTML += "<img src=" + Maserati + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Bertone") {
+					newHTML += "<img src=" + Bertone + " class=\"image\" />"
+				}
+				else if (elements[i].childNodes[0].nodeValue === "Aston Martin") {
+					newHTML += "<img src=" + AstonMartin + " class=\"image\" />"
+				}
 				else {
 					newHTML += "<img src=" + LogoImg + " class=\"image\" />"
 				}
@@ -338,24 +362,15 @@ class HomeTwo extends React.Component {
 
 		return (
 			<div className="container-fluid" style={{backgroundColor: "#D3D3D3", overflow: "scroll", width: '100%', padding: 0, margin: 0, height: '100%'}}>
-				<div className="text-center" style={{backgroundColor: "white", width: '100%', height: '100%', padding: 0, margin: 0}}>
-					<h1>My Car Maintenance</h1>
-					<hr width="50%">
-					</hr>
-					<br></br>
-					<Link to="about" className="btn btn-primary btn-lg">About Us</Link>
-					<br/><br/>
-					<br/>
-				</div>
 
 				<br></br>
 
 				<div className="text-center" style={{backgroundColor: "#D3D3D3", width: '100%', height: '100%', padding: 0, margin: 0}}>
-					<h3 style={{textAlign: "left", width: "75%", marginLeft: "auto", marginRight: "auto"}}>Your Car: {this.props.location.state.year} __</h3>
+					<h3 style={{textAlign: "left", width: "75%", marginLeft: "auto", marginRight: "auto"}}><b style={{fontSize: "35px"}}>Your Car:</b> {this.props.location.state.year} . . .</h3>
 					<div id="main" className="jumbotron text-start" style={{justifyContent: 'center', alignItems: 'center', width: '75%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: '#DBEEF4',   borderRadius: '5px',
 					  boxShadow: '10px 10px 10px grey'}}>
 
-						<p>Select a make</p>
+						<h2>Select a make</h2>
 
 						<div id="main2">
 						<h2 id="loading">Loading...</h2>

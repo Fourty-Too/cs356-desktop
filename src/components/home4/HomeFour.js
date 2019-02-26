@@ -158,24 +158,15 @@ class HomeFour extends React.Component {
 
 		return (
 			<div className="container-fluid" style={{backgroundColor: "#D3D3D3", overflow: "scroll", width: '100%', padding: 0, margin: 0, height: '100%'}}>
-				<div className="text-center" style={{backgroundColor: "white", width: '100%', height: '100%', padding: 0, margin: 0}}>
-					<h1>My Car Maintenance</h1>
-					<hr width="50%">
-					</hr>
-					<br></br>
-					<Link to="about" className="btn btn-primary btn-lg">About Us</Link>
-					<br/><br/>
-					<br/>
-				</div>
 
 				<br></br>
 
 				<div className="text-center" style={{backgroundColor: "#D3D3D3", width: '100%', height: '100%', padding: 0, margin: 0}}>
-				<h3 style={{textAlign: "left", width: "75%", marginLeft: "auto", marginRight: "auto"}}>Your Car: {this.props.location.state.year} {this.props.location.state.make} {this.props.location.state.model} __</h3>
+				<h3 style={{textAlign: "left", width: "75%", marginLeft: "auto", marginRight: "auto"}}><b style={{fontSize: "35px"}}>Your Car:</b> {this.props.location.state.year} {this.props.location.state.make} {this.props.location.state.model} . . .</h3>
 					<div id="themain" className="jumbotron text-start" style={{justifyContent: 'center', alignItems: 'center', width: '75%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: '#DBEEF4',   borderRadius: '5px',
 					  boxShadow: '10px 10px 10px grey'}}>
 
-						<p>Select a trim level</p>
+						<h2>Select a trim level</h2>
 
 						<div id="themain2">
 						<h2 id="loading4">Loading...</h2>

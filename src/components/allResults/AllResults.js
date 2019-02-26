@@ -86,7 +86,7 @@ class AllResults extends React.Component {
 
 		return (
 			<div className="text-center" style={{padding: '2rem 5rem', width: "100%", marginLeft: 'auto', marginRight: 'auto', display: 'inline-block', backgroundColor: "#D3D3D3", height: '80%'}}>
-			<h1>Your Car:  </h1> <h3>{this.props.location.state.year} {this.props.location.state.make} {this.props.location.state.model} {this.props.location.state.trim}, {this.props.location.state.mileage} miles</h3>
+			<h3><b style={{fontSize: "35px"}}>Your Car:</b> {this.props.location.state.year} {this.props.location.state.make} {this.props.location.state.model} {this.props.location.state.trim}, {this.props.location.state.mileage} miles</h3>
 
 					<div className="jumbotron text-start" style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#DBEEF4',   borderRadius: '5px',
 						boxShadow: '10px 10px 10px grey', paddingBottom: 90, marginBottom: 20}}>
